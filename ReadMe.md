@@ -12,7 +12,7 @@ In the modern society, apartment rental is a general requirement for people, esp
 ### High Level Design Diagram
 As mentioned in the Overview section, the capstone project is constructed by a web crawler and machine learning models. Figure 1 illustrates the workflow of this capstone project.
 
-<center>![alt text](https://github.com/eliac1988/Apartment_Rent_Analysis/blob/master/image/Webcrawler.png)</center>
+<center>![alt text](image/Webcrawler.png)</center>
 <center>Figure 1 Workflow of the capstone project for web crawler and machine learning</center>
 
 <br>
