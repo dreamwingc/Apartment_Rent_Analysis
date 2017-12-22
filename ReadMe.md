@@ -12,12 +12,10 @@ In the modern society, apartment rental is a general requirement for people, esp
 ### High Level Design Diagram
 As mentioned in the Overview section, the capstone project is constructed by a web crawler and machine learning models. Figure 1 illustrates the workflow of this capstone project.
 
-<center>
- 
-![alt text](https://user-images.githubusercontent.com/6709658/34314366-c9533bc8-e727-11e7-9b58-da92df021446.png)
-
-</center> 
-<center>Figure 1 Workflow of the capstone project for web crawler and machine learning</center>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/6709658/34314591-ecdfabc4-e729-11e7-81ae-36e2a1cd5924.png">
+</p> 
+<p align="center">Figure 1 Workflow of the capstone project for web crawler and machine learning</p>
 
 <br>
 Firstly, the right page of apartment rental from craigslist need to be selected. The search area, such as San Francisco Bay Area which applied in this project, is set to the right place. The url of the proper webpage is copied for later use. Information which need to be crawled could be find via the frontend webpage by inspection. Secondly, the web crawler could crawl the required information from the saved url, then, the crawled data would be sent to MySQL to build forward index. Memcached accesses the data in MySQL to build the inverted index for searching demand. Furthermore, the machine learning models would work with the crawled data obtained from MySQL to analyze and return a learning curve. Finally, users could make the final decision based on the results calculated by the machine learning models.
@@ -28,19 +26,27 @@ In this section, the detailed design is explained based on the workflow in Figur
 #### Useful Information
 Before starting the crawl task, some useful information needs to be recorded and applied to the web crawler, such as the url of target webpage, the prefix/category of the crawled data, other urls which might help the data collection. In this project, the url of apartment rental of craigslist is used to be the target page. From the target page, there are different links to the detailed apartment information. The monthly rent, floor plan and location details are in each apartment webpage, and these details could be crawled based on the prefix of the frontend inspections. After all the useful information being located, the web crawler would crawl data based on the provided information. Figure 2 and Figure 3 show examples of useful information obtained from craigslist.
 
-<center>![alt text](image\craigslistURL.png)</center>
-<center>Figure 2 Main webpage for data crawling</center>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/6709658/34314366-c9533bc8-e727-11e7-9b58-da92df021446.png">
+</p> 
+<p align="center">Figure 2 Main webpage for data crawling</p>
 
 <br>
 
-<center>![alt text](image\usefulInfo.png)</center>
-<center>Figure 3 Examples of useful information obtained from frontend web details</center>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/6709658/34314609-16772c50-e72a-11e7-8ea5-be46b24e79af.png">
+</p> 
+<p align="center">Figure 3 Examples of useful information obtained from frontend web details</p>
+
 
 #### Web Crawler
 Scrapy which is a powerful framework for web crawling performs the crawl task of this project. It helps build an impactful web crawler with less code and simpler structure. Figure 4 illustrates an example structure of a simple crawler created by Scrapy.
 
-<center>![alt text](image\scrapy.png)</center>
-<center>Figure 4 An example structure of a simple crawler created by Scrapy obtained from scrapy.org</center>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/6709658/34314622-37227f54-e72a-11e7-8de0-4b88c85e5459.png">
+</p> 
+<p align="center">Figure 4 An example structure of a simple crawler created by Scrapy obtained from scrapy.org</p>
 
 <br>
 
@@ -49,14 +55,18 @@ Scrapy which is a powerful framework for web crawling performs the crawl task of
 #### Database Information
 To store data to MySQL, a schema with related tables is required to be created. In this project, a schema called "web_crawler" is created, as well as the related table named as "web_crawler". In table "web_crawler", several columns are created to store the crawled data, such as the column "price", "floor_plan", "location", etc. These columns could be extracted by the inverted indexer and the machine learning model. Figure 5 exhibits a screen shot from MySQL workbench.
 
-<center>![alt text](image\MySQL.png)</center>
-<center>Figure 5 A screen shot from MySQL workbench</center>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/6709658/34314637-5e6ba84c-e72a-11e7-8923-381259ff33b6.png">
+</p> 
+<p align="center">Figure 5 A screen shot from MySQL workbench</p>
 
 #### Machine Learning Model
 Machine learning is widely used for prediction in recent years. It is applied to this project to analyze and predict apartment rental price in a given area, so that a regression model, such as linear regression, would achieve the goal. Figure 6 represents a trained model mapping for linear regression. For training part, the rental price is the training label. The location, floor plan and other useful information are the features of each observation. The optimized model would be tested, evaluated and obtained by the crawled data.
 
-<center>![alt text](image\linearRegression.png)</center>
-<center>Figure 5 A trained model mapping for linear regression obtained from https://commons.wikimedia.org/wiki/File:Linear_regression.svg</center>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/6709658/34314647-8927feaa-e72a-11e7-8645-00c73036c377.png">
+</p> 
+<p align="center">Figure 6 A trained model mapping for linear regression obtained from https://commons.wikimedia.org/wiki/File:Linear_regression.svg</p>
 
 <br>
 
