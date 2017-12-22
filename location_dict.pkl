@@ -1,0 +1,113 @@
+(dp0
+V saratoga
+p1
+I16
+sV san jose west
+p2
+I5
+sV morgan hill
+p3
+I2
+sV lathrop/tracy/1 hour drive
+p4
+I20
+sV san jose/evergreen
+p5
+I24
+sV sunnyvale
+p6
+I7
+sV almaden
+p7
+I17
+sV 3200 payne avenue
+p8
+I29
+sV santa clara
+p9
+I1
+sV cupertino
+p10
+I4
+sV stockton
+p11
+I28
+sV westlake #1
+p12
+I31
+sV  near ace station
+p13
+I36
+sV willow glen / cambrian
+p14
+I12
+sV  lathrop/tracy/1 hour drive
+p15
+I32
+sV downtown san jose
+p16
+I21
+sV campbell
+p17
+I9
+sV san francisco
+p18
+I30
+sV gilroy
+p19
+I14
+sV san jose downtown
+p20
+I11
+sV milpitas
+p21
+I6
+sV mountain view
+p22
+I3
+sV san jose south
+p23
+I0
+sV san jose north
+p24
+I13
+sV los altos
+p25
+I35
+sV south beach
+p26
+I23
+sV san jose east
+p27
+I8
+sV atherton
+p28
+I27
+sV los gatos
+p29
+I10
+sV san jose
+p30
+I18
+sV west san jose / cupertino border
+p31
+I34
+sV willow glen
+p32
+I25
+sV almaden valley cottage
+p33
+I26
+sV palo alto
+p34
+I19
+sV so. san jose / blossom valley
+p35
+I22
+sV willow glen area
+p36
+I15
+sV so. san jose / almaden valley
+p37
+I33
+s.

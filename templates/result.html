@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result from Memcatch</title>
+</head>
+<body>
+    {% for subData in data %}
+        <li> Title: {{ subData[4] }}  </li>
+        <li> Floor Plan: {{ subData[3] }}  </li>
+        <li> Rent: {{ subData[1] }} </li>
+        <li> Location: {{ subData[2] }} </li>
+        <a href={{ subData[0] }} target="_blank">Click here for more information</a>
+        <br>
+        <br>
+    {% endfor %}
+
+</body>
+</html>
